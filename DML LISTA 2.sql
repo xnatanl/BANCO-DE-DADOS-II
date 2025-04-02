@@ -68,3 +68,23 @@ INSERT INTO telefone_cliente values ("666.777.888-99","(67)8121-8833");
 
 ALTER TABLE cliente ADD email VARCHAR(45);
 SELECT cliente_cpf, endereco FROM cliente WHERE nome LIKE "C%";
+
+SELECT * FROM conta;
+UPDATE agencia SET numero_agencia = 6342 WHERE numero_agencia = 562;
+ALTER TABLE conta ADD CONSTRAINT fk_agencia FOREIGN KEY (num_agencia) REFERENCES agencia(numero_agencia) ON DELETE CASCADE ON UPDATE CASCADE;
+
+update cliente set email = "Caetanolima@gmail.com" where nome = "Caetano K Lima";
+
+update conta set saldo = saldo * 1.1 where num_conta = "23584-7";
+
+-- 6
+
+insert into agencia values(1333, 1, "Rua João José da Silva, 486");
+
+-- 7
+
+select numero_agencia, endereco from agencia where cod_banco = 1;
+
+select * from cliente where sexo = "M";
+
+DELETE FROM conta WHERE num_agencia = 86340-2;
